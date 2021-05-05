@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    /* overflow: hidden; /* Hide scrollbars */  
+    
+}
+ul { 
+    list-style: none;
+    
+    text-decoration: none;
+}
+.coinlist-image {
+    width: 70px;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.coinlist-item {
+    display: flex;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.coin-data-category {
+    font-size: 10px;
 }
+.delete-icon {
+    
+    fill: white !important;
+    right: 6px;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.coin{
+    color: white;
+}
+.coin:hover{
+    text-decoration: none;
+}
+.coin:hover .delete-icon {
+    display: block !important;
 }
