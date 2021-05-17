@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import CoinDetailPage from './pages/CoinDetailPage';
 import CoinSummaryPage from './pages/CoinSummaryPage';
 import Header from './componentsi/Header';
@@ -7,7 +7,7 @@ import "./app.css";
 
 
 import { SenseiProvider, themeDark as theme } from "react-sensei";
-import { WatchListContext, WatchListContextProvider } from './context/watchListContext';
+import {  WatchListContextProvider } from './context/watchListContext';
 
 
 

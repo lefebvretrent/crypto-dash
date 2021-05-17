@@ -19,6 +19,7 @@ const AddCoin = () => {
         "cardano",
         "dogecoin",
         "vechain",
+        "fetch-ai"
 
     ];
 
@@ -32,21 +33,24 @@ const AddCoin = () => {
       }
     return (
         <div className="dropdown">
-            <div className="row">
-            <div className="col-4">
-            <CleanButton isPrimary onClick={() => setIsActive(!isActive)} className="btn  btn-lg dropdown-toggle" type="button">Add Coin</CleanButton>
+            
+            <div className="row ">
+            <div className="col-12  col-md-12">
+            <CleanButton disabled className="btn" type="button">News</CleanButton>
             
             </div>
-            <div className="col-4">
-            <CleanButton isAccent onClick={() => refreshPage()} className="btn btn-lg" type="button">Refresh Data</CleanButton>
+            
+            <div className="col-6 col-md-6">
+            <CleanButton isPrimary onClick={() => setIsActive(!isActive)} className="btn   dropdown-toggle" type="button">Add Coin</CleanButton>
+            
             </div>
-            <div className="col-4">
-            <CleanButton disabled className="btn" type="button">TOP GAINERS</CleanButton>
-            </div>
+            <div className="col-6 col-md-6 ">
+            <CleanButton isAccent onClick={() => refreshPage()} className="btn " type="button">Refresh Data</CleanButton>
+            
+            
             </div>
             
-
-
+            </div>
             <div className={isActive ? "dropdown-menu show" : "dropdown-menu"}>
                 {availableCoins.map(el => {
                     return (
@@ -58,6 +62,11 @@ const AddCoin = () => {
 
 
             </div>
+            
+            
+
+
+            
             
         </div>
     )
