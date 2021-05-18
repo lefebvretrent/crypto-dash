@@ -52,18 +52,21 @@ const CoinDetailPage = () => {
                     days: "365",
                 },
             }),
-            coinGecko.get("/coins/markets", {
+            coinGecko.get(`/coins/markets`, {
                 params: {
                     vs_currency: "cad",
-                    ids: id
-                }
-            })
+                    ids: id,
+                    price_change_percentage: "7d"
+                   
+                },
+            }),
+            
 
         ])
         
 
             
-            console.log(detail);
+            console.log(detail.data);
             setCoinData({
                 day: formatData(day.data.prices),
                 week: formatData(week.data.prices),

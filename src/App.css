@@ -12,6 +12,10 @@ ul {
     
     text-decoration: none;
 }
+.picture{
+    height: 130px !important;
+    max-width: 100% !important;
+}
 .coinlist-image {
     width: 70px;
     align-items: center;

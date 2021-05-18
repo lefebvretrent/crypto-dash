@@ -65,14 +65,30 @@ const HistoryChart = ({data}) => {
             )
         }
     }
+     const renderPercentage7d = () => {
+         if (detail) {
+            return (
+                
+                <>
+                
+                 <p className={
+                     detail.price_change_percentage_7d_in_currency < 0 ? "text-danger my-0" : "text-success my-0"
+
+               }>{detail.price_change_percentage_7d_in_currency.toFixed(1)}%</p>
+               </>
+            )
+         }
+    }
     const renderPercentage = () => {
         if (detail) {
             return (
+                
                 <>
+                
                 <p className={
                     detail.price_change_24h < 0 ? "text-danger my-0" : "text-success my-0"
 
-                }>{detail.price_change_percentage_24h.toFixed(2)}%</p>
+                }>{detail.price_change_percentage_24h.toFixed(1)}%</p>
                 </>
             )
         }
@@ -83,12 +99,12 @@ const HistoryChart = ({data}) => {
           value: renderPrice() ,
         },
         {
-          label: "Daily Percentage",
+          label: "Daily",
           value: renderPercentage() ,
         },
         {
-          label: "Target",
-          value: 15.44,
+          label: "Weekly",
+          value: renderPercentage7d(),
         },
         
       ];
