@@ -19,7 +19,8 @@ const AddCoin = () => {
         "cardano",
         "dogecoin",
         "vechain",
-        "fetch-ai"
+        "fetch-ai",
+        "peach-finance",
 
     ];
 
@@ -35,16 +36,16 @@ const AddCoin = () => {
         <div className="dropdown">
             
             <div className="row ">
-            <div className="col-12  col-md-12">
+            <div className="col-12  col-md-12 mt-2">
             <CleanButton disabled className="btn" type="button">News</CleanButton>
             
             </div>
             
-            <div className="col-6 col-md-6">
+            <div className="col-6 col-md-6 mt-2">
             <CleanButton isPrimary onClick={() => setIsActive(!isActive)} className="btn   dropdown-toggle" type="button">Add Coin</CleanButton>
             
             </div>
-            <div className="col-6 col-md-6 ">
+            <div className="col-6 col-md-6 mt-2">
             <CleanButton isAccent onClick={() => refreshPage()} className="btn " type="button">Refresh Data</CleanButton>
             
             

@@ -1,11 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
+    
+    margin: 15 !important;
+    padding: 15 !important;
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
-    /* overflow: hidden; /* Hide scrollbars */  
     
+    
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 ul { 
     list-style: none;

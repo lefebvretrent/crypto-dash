@@ -67,6 +67,7 @@ const CoinDetailPage = () => {
 
             
             console.log(detail.data);
+            
             setCoinData({
                 day: formatData(day.data.prices),
                 week: formatData(week.data.prices),
@@ -78,6 +79,8 @@ const CoinDetailPage = () => {
         }
         fetchData();
     }, []);
+
+   
     
     const rednerData = () => {
         if (isLoading){
@@ -85,8 +88,9 @@ const CoinDetailPage = () => {
         }
         return ( 
             <>
+            
             <div className="row">
-            <div className="col-12 col-lg-4" >
+            <div className="col-12 col-lg-5" >
                 
                 <HistoryChart data={coinData}/>
                 
@@ -96,29 +100,17 @@ const CoinDetailPage = () => {
 
             </div>
             
-            <div className="col-12 col-lg-8">
+            <div className="col-12 col-lg-7">
             <CoinData data={coinData.detail}/>
 
-
-
-
-
-
-            <PieChartCard
-            data={coinData.detail}
             
-        cardTitle="Earnings"
-        label="Target"
-        value="$53k"
-        series={[20, 20, 60]}
-      />
       
            
       </div>
-            <div className="col-12 col-lg-3">
+            {/* <div className="col-12 col-lg-3">
             <CoinData />
             
-            </div>
+            </div> */}
             </div>
             </>
             

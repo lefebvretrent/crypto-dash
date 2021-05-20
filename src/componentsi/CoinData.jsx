@@ -1,14 +1,30 @@
 import React from 'react';
 import { IconFigureCard } from '../components/library/index'
+import { PieChartCard } from "../components/library/index";
 
 const CoinData = ({data}) => {
 
+  
+
     const renderData = () =>{
         if (data){
+          let circulatingSupply = data.circulating_supply;
+  let totalSupply = data.total_supply;
+  console.log(totalSupply);
+  console.log(circulatingSupply);
             return (
                 <>
                 
                 <div className="row">
+                <div className="col-12 col-lg-12 mt-2">
+               <IconFigureCard
+               isPrimary
+            label={'Name'}
+            value={data.name}
+            icon={"dollar-alt"}
+          />
+          </div>
+                  
                <div className="col-12 col-lg-6">
                <IconFigureCard
             label={'Market Cap'}
@@ -42,19 +58,32 @@ const CoinData = ({data}) => {
           </div>
           <div className="row">
                <div className="col-12 col-lg-6">
-               <IconFigureCard
+               {/* <IconFigureCard
             label={'Total Supply'}
             value={data.total_supply}
             icon={"receipt-alt"}
-          />
+          /> */}
           </div>
           <div className="col-12 col-lg-6">
-               <IconFigureCard
+               {/* <IconFigureCard
             label={'Circulating Supply'}
             value={data.circulating_supply}
             icon={"receipt-alt"}
-          />
+          /> */}
           </div>
+          {/* change col-lg-12 to 6 for adding more information  */}
+          <div className="col-12 col-lg-12">
+            
+          <PieChartCard
+            
+            
+        cardTitle="Total Supply"
+        label="Circulating Supply"
+        value={circulatingSupply}
+        series={[ circulatingSupply, totalSupply]}
+        /* Purple is circulating supply and blue is the total supply */
+      />
+      </div>
           </div>
           
         

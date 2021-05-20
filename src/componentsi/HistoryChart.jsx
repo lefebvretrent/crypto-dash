@@ -114,18 +114,18 @@ const HistoryChart = ({data}) => {
     return (
         <>
         
-        <div >
+        <div className="col-12">
            
             {/* <div>{renderPrice()}</div> */}
-            <div>
+            <div className="mt-2">
             
-            <BadgeFiguresCard  items={items} className=""/>
+            <BadgeFiguresCard  items={items} className="mt-2"/>
            <canvas ref={chartRef} id="myChart" width={250} height={250} ></canvas>
            </div>
-           <div className="chart-button mt-1" style={{ display: "flex" }}>
+           <div className="col-12 chart-button mt-2" style={{ display: "flex" }}>
            <CleanButton isDefault onClick={() => setTimeFormat("24h")}
                
-               className="btn" >Day View</CleanButton>&nbsp;
+               className=" btn" >Day View</CleanButton>&nbsp;
 
                <CleanButton isPrimary onClick={() => setTimeFormat("7d")} className="btn ">Week View</CleanButton>&nbsp;
                <CleanButton isAccent onClick={() => setTimeFormat("1y")} className="btn ">Year View</CleanButton>

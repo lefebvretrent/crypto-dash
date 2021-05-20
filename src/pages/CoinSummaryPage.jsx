@@ -18,6 +18,7 @@ const CoinSummaryPage = () => {
             <div className="col-md-4 col-lg-6 ">
                
             <AddCoin />
+            
             <CoinList />
             
             </div>
