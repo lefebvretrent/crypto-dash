@@ -39,7 +39,7 @@ const Wrapper = ({ cardTitle, value, label, series }) => {
   const [options, setOptions] = useState({
     chart: {
       animations: {
-        enabled: false,
+        enabled: true,
       },
     },
     grid: {

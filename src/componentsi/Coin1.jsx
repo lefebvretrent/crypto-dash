@@ -4,17 +4,39 @@ import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import TrendingDownIcon from '@material-ui/icons/TrendingDown';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import AddIcon from '@material-ui/icons/Add';
-import { Button } from '@material-ui/core';
-import {  useContext } from 'react'
+
+import {  useContext, useState } from 'react'
 import { WatchListContext } from '../context/watchListContext';
+import { Alert } from 'reactstrap';
+
+
 
 const Coin = ({coin, deleteCoin}) => {
     const {addCoin} = useContext(WatchListContext);
+    const [isOpen, setIsOpen] = useState(false);
+    
+    const handleVisible = () => { 
+        setIsOpen(true)
+        setTimeout(() => { 
+            setIsOpen(false)
+        }, 2000);
+    } 
+
+   
+        
+    
+    
+    
     return (
         // style={{ textDecoration: 'none', color: 'white' }}
         
+        <>
+        <Alert className="alert" isOpen={isOpen} ><center>Successfully added to Watchlist</center></Alert>
+        
+        
         <Link to={`/coins/${coin.id}`} className="text-decoration-none my-1 coin">
             <li className="coinlist-item.list-group-item.list group-item-action d-flex justify-content-between align-items-center coin">
+            
                 <img className="coinlist-image" src={coin.image}  alt=""/>
                 <span className="text-decoration-none">{coin.current_price}</span>
                 
@@ -26,20 +48,29 @@ const Coin = ({coin, deleteCoin}) => {
                 
                     
                 </span>
+                
 
                 
-                
-                <DeleteOutlineIcon onClick={(e) => {
+                <AddIcon onClick={(e) => {
                     e.preventDefault()
-                    deleteCoin(coin.id)
+                    addCoin(coin.id)
+                    handleVisible()
+                    
 
-                }} className="delete-icon" /> 
+                    
+                    
+                   
+
+                }}/>
+                
+                
                
                 
                 
                     
             </li>
         </Link>
+        </>
     )
 }
 

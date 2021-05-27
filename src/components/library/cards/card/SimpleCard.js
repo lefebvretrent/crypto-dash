@@ -17,6 +17,7 @@ const Card = styled.div`
   border-radius: ${(p) => p.theme.borderRadius};
   background: ${(p) => p.theme.colorCardBackground};
   color: ${(p) => p.theme.colorText};
+  z-index: 1000;
 
   ${(p) => p.isPrimary && primary};
   ${(p) => p.isAccent && accent};

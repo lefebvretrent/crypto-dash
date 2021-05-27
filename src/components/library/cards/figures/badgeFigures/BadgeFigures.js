@@ -49,7 +49,7 @@ const Wrapper = ({ items, badgeSize, badgeFill }) => {
             <StyledCol>
               <StyledBadge
                 size={badgeSize || "lg"}
-                fill={badgeFill || colors[index]}
+                //  fill={badgeFill || colors[index]}
                 icon={item.icon}
               />
               <InfoStack

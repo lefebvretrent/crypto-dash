@@ -54,9 +54,9 @@ const StyledIcon = styled.span`
   }
 `;
 
-const Wrapper = ({ label, value, icon = "bars", isPrimary }) => {
+const Wrapper = ({ label, value, icon = "bars", isPrimary, isAccent }) => {
   return (
-    <StyledCard isPrimary={isPrimary}>
+    <StyledCard isPrimary={isPrimary} isAccent={isAccent}>
       <div>
         <StyledLabel isPrimary={isPrimary}>{label}</StyledLabel>
         <StyledValue isPrimary={isPrimary}>{value}</StyledValue>

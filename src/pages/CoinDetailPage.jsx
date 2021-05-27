@@ -4,7 +4,7 @@ import CoinData from '../componentsi/CoinData'
 import HistoryChart from '../componentsi/HistoryChart'
 import coinGecko from '../apis/coinGecko'
 import Spinner from '../componentsi/Spinner/index'
-import { PieChartCard } from "../components/library/index";
+
 
 
 

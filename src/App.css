@@ -5,12 +5,108 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    box-sizing: border-box;
     
     
 }
+.App {width: 100vw;
+height: 100vh;}
+.Sidebar {
+    height: 100% !important;
+    width: 250px !important;
+    background-color: lightblue !important;
+    display:inline-table;
+
+}
 html, body {
     max-width: 100%;
+    overflow-y: inherit;
     overflow-x: hidden;
+    
+}
+.navbar{
+    
+    background-color: #242424;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky !important;
+    top: 0;
+    
+    
+    
+}
+.menu-bars {
+    
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+    
+
+}
+.menu-bars:hover{
+    fill: red;
+}
+.nav-menu{
+    background-color: #242424;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+
+    
+    
+}
+.nav-menu.active{
+    left: 0;
+    transition: 350ms;
+    z-index: 1000;
+}
+.nav-text{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+}
+.nav-text a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+.nav-text a:hover{
+    background-color: #8739F9;
+}
+.nav-menu-items {
+    width: 100%;
+    
+}
+.navbar-toggle{
+    background-color: #242424;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.alert{
+    
+    width: 100%;
+    /* display: none; */
+}
+span {
+    margin-left: 16px;
 }
 ul { 
     list-style: none;
@@ -50,3 +146,31 @@ ul {
 .coin:hover .delete-icon {
     display: block !important;
 }
+.dropdown {
+    z-index: 0;
+}
+/* SearchBar*/
+.Search {
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+  .SearchInput {
+    width: 85%;
+    border: 3px solid #8739F9;
+    border-left: none;
+    padding: 5px;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+  }
+  .SearchSpan {
+    width: 15%;
+    border: 1px solid #00aaf2;
+    background: #00aaf2;
+    padding-top: 4px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    font-size: 20px;
+  }
