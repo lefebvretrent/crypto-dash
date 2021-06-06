@@ -121,6 +121,11 @@ ul {
     width: 70px;
     align-items: center;
 }
+.news-image{
+    width: 90%;
+    align-items: center;
+}
+
 
 .coinlist-item {
     display: flex;

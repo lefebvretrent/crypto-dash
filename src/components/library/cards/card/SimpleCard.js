@@ -55,7 +55,7 @@ export default ({
     >
       {cardTitle && (
         <>
-          <CardTitle>{cardTitle}</CardTitle>
+          <CardTitle>{cardTitle}</CardTitle> 
           <CardContent>{children}</CardContent>
         </>
       )}
