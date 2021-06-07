@@ -125,6 +125,15 @@ ul {
     width: 90%;
     align-items: center;
 }
+.card-title{
+    font-size: 22px;
+    padding-bottom: 10px;
+
+}
+.news-text{
+    text-align: left;
+}
+
 
 
 .coinlist-item {

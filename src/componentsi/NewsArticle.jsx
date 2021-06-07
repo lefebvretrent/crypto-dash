@@ -11,8 +11,17 @@ const NewsArticle = ({data}) => {
             
             <a target="_blank" href={data.url} style={{textDecoration: "none"}}>
             
-            <Card cardTitle={data.title} >
-               
+            
+            <Card  >
+            <div className="card-title">
+                <b>
+            {data.title}
+            </b>
+            </div>
+
+            
+      
+           
 
             <li className="d-flex  ">
                 
@@ -21,10 +30,15 @@ const NewsArticle = ({data}) => {
             </div>
             
             
+            
+            
+            
 
             <div className="news-text text-decoration-none">{data.description}</div>
  
         </li>
+        
+            
   
             </Card>
             </a>
