@@ -3,7 +3,7 @@ import { CleanButton,Card } from '../components/library/index'
 import {Link} from 'react-router-dom';
 
 const NewsArticle = ({data}) => {
-    console.log(data);
+    
     
     return (
         
@@ -26,7 +26,8 @@ const NewsArticle = ({data}) => {
             <li className="d-flex  ">
                 
             <div className="col-6">
-            <img className="news-image" src={data.urlToImage}  alt=""/>
+            <img className="news-image" src={data.image}  alt=""/>
+            
             </div>
             
             

@@ -20,7 +20,7 @@ export const NewsContextProvider = (props) => {
     useEffect(() => {
       axios
         .get(
-          `http://newsapi.org/v2/everything?q=bitcoin+ethereum&language=en&sortBy=popularity&excludeDomains=www.fool.com&from=${todayDate}&apiKey=${apiKey}`
+          `https://newsapi.org/v2/everything?q=bitcoin+ethereum&language=en&sortBy=popularity&excludeDomains=www.fool.com&from=${todayDate}&apiKey=${apiKey}`
         )
         .then((response) => setData(response.data))
         .catch((error) => console.log(error));
